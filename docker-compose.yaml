@@ -1,0 +1,10 @@
+version: '3'
+services:
+  app:
+    build: .
+    environment:
+      - OTP_SECRET=IV4GC3LQNRSVGZLDOJSXIU3UOJUW4ZZR
+    volumes:
+      - .:/app
+    ports:
+      - "8000:80"
