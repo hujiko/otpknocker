@@ -1,26 +1,14 @@
 {% extends 'layout.html' %}
 
 {% block content %}
-<form class="contact100-form validate-form" action="/verify" method="POST" autocomplete="off">
-  <span class="contact100-form-title">
-    Authenticate
-  </span>
-  <div class="wrap-input100">
-    <span class="label-input100">OTP-Code</span>
-    <input style="height: 100px; font-size: 6em;" type="text" name="otp" autocomplete="off" placeholder="000 000" maxlength="6">
-    <span class="focus-input100"></span>
+<form action="/verify" method="POST" autocomplete="off" class="form login">
+  <div class="form__field">
+    <label for="otp_code"><svg class="icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#lock"></use></svg><span class="hidden">OTP-Code</span></label>
+    <input id="otp_code" type="text" name="otp" class="form__input" placeholder="000 000" required autocomplete="off" maxlength="6" style="height: 60px; font-size: 4em;">
   </div>
 
-  <div class="container-contact100-form-btn">
-    <div class="wrap-contact100-form-btn">
-      <div class="contact100-form-bgbtn"></div>
-      <button class="contact100-form-btn" type="submit">
-        <span>
-          Authenticate
-          <i class="m-l-7">&#10142;</i>
-        </span>
-      </button>
-    </div>
+  <div class="form__field">
+    <input type="submit" value="Authenticate">
   </div>
 </form>
 {% endblock %}
