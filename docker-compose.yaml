@@ -3,7 +3,7 @@ services:
   app:
     build: .
     environment:
-      - OTP_SECRET=IV4GC3LQNRSVGZLDOJSXIU3UOJUW4ZZR
+      - OTP_SECRET=IV4GC3LQNRSVGZLDOJSXIU3UOJUW4ZZR # Change me before usage!!
     volumes:
       - .:/app
     ports:
